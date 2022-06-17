@@ -81,7 +81,7 @@
   .days:hover {
     background-color: rgb(200, 238, 251);
   }
-  a {
+  #celcium, #farenheit {
     font-size: 40px;
   }
   #link {
