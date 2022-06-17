@@ -12,20 +12,23 @@
   #search {
     background-color: #a56cc1;
     color: #cefff1;
-    padding: 8px;
+    padding: 8px 10px;
     border: none;
     border-radius: 20px;
+    margin: 0 20px ;
   }
   #cur {
     background-color: #6c83c1;
     color: #cefff1;
-    padding: 8px;
+    padding: 8px 10px;
     border: none;
     border-radius: 20px;
+    margin: 0 10px ;
   }
 
   form {
     padding: 8px;
+    display: flex inline;
   }
   h1 {
     display: inline;
