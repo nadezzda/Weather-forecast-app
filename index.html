@@ -24,8 +24,8 @@
   </head>
   <body>
     <div class="search">
-      <form>
-        <input type="text" placeholder="Search city" id="searchCity" />
+      <form id="head"> 
+        <input type="text" placeholder="Enter the city..." id="searchCity" />
         <button id="search">Search</button>
         <button id="cur">Current</button>
       </form>
@@ -40,12 +40,12 @@
       <div class="container">
         <div class="row">
           <div class="col icon">
-            <i class="fa-regular fa-sun"></i>
+            <img src="#" id="icon">
           </div>
           <div class="col precipitation">
-            Chance of precipitation: 2%<br />
-            Humidity: 37%<br />
-            Wind: 27 km/h
+            <span id="description">Overcast clouds</span><br />
+            Humidity: <span id="humidity">37</span>%<br />
+            Wind: <span id="wind">27 </span> km/h
           </div>
         </div>
       </div>

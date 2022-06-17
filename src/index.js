@@ -30,6 +30,15 @@ function temperature(response) {
   let h1 = document.querySelector(".temperature");
   let temp = Math.round(response.data.main.temp);
   h1.innerHTML = `${temp}`;
+  let icon = document.querySelector("#icon");
+  icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  icon.setAttribute("alt", response.data.weather[0].description);
+  let humidity = document.querySelector("#humidity");
+  let wind = document.querySelector("#wind");
+  humidity.innerHTML = response.data.main.humidity;
+  wind.innerHTML = Math.round(response.data.wind.speed);
+  let description = document.querySelector("#description");
+  description.innerHTML = response.data.weather[0].main;
 }
 function current(event) {
   event.preventDefault();

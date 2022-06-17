@@ -3,7 +3,7 @@
     border-radius: 30px;
     margin: 30px;
     padding: 20px;
-    background-color: #cefff1;
+    background-color: lightblue;
     font-family: "Cousine", monospace;
     width: 50%;
     margin-left: auto;
@@ -23,6 +23,7 @@
     border: none;
     border-radius: 20px;
   }
+
   form {
     padding: 8px;
   }
@@ -52,17 +53,18 @@
   .container {
     padding: 10px;
     margin: 20px 5px;
-    border: 2px solid #cefff1;
-    background-color: #cefff1;
+    background-color: lightblue;
   }
   .fa-sun {
     font-size: 70px;
-    color: rgb(252, 202, 23);
+    color: #6c83c1;
     padding: 30px 60px;
+    margin: 0;
   }
   .precipitation {
     color: #a56cc1;
     padding: 30px;
+    font-size: 19px;
   }
   .forecast {
     margin: 10px;
@@ -85,7 +87,11 @@
     font-size: 40px;
   }
   #link {
-font-family: monospace;
-font-size: 15px;
-text-align: center;
+    font-family: monospace;
+    font-size: 15px;
+    text-align: center;
   }
+#icon {
+  width: 50%;
+  margin-left: 50px ;
+}
