@@ -84,4 +84,8 @@
   a {
     font-size: 40px;
   }
-  
+  #link {
+font-family: monospace;
+font-size: 15px;
+text-align: center;
+  }
