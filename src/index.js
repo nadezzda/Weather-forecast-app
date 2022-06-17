@@ -28,7 +28,8 @@ form.addEventListener("submit", search);
 
 function temperature(response) {
   let h1 = document.querySelector(".temperature");
-  let temp = Math.round(response.data.main.temp);
+  tempCelcium = response.data.main.temp;
+  let temp = Math.round(tempCelcium);
   h1.innerHTML = `${temp}`;
   let icon = document.querySelector("#icon");
   icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -39,6 +40,7 @@ function temperature(response) {
   wind.innerHTML = Math.round(response.data.wind.speed);
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].main;
+  
 }
 function current(event) {
   event.preventDefault();
@@ -61,21 +63,25 @@ function current(event) {
 let button = document.querySelector("#cur");
 button.addEventListener("click", current);
 
-/*function farenheit(event) {
-event.preventDefault()
-let tempf = Math.round(23*1.8+32);
+function farenheit(event) {
+event.preventDefault();
+convertc.classList.remove("active");
+convertf.classList.add("active");
+let tempfar = tempCelcium*1.8+32;
 let change = document.querySelector(".temperature");
-change.innerHTML = `${tempf}`;
+change.innerHTML = Math.round(tempfar);
 }
 let convertf = document.querySelector("#farenheit");
 convertf.addEventListener("click",farenheit);
 
 function celcium(event) {
 event.preventDefault()
-let tempc = Math.round((73.4-32)/1.8);
+convertf.classList.remove("active");
+convertc.classList.add("active");
+let tempc = Math.round(tempCelcium);
 let change = document.querySelector(".temperature");
 change.innerHTML = `${tempc}`;
 }
 let convertc = document.querySelector("#celcium");
 convertc.addEventListener("click",celcium);
-*/
+

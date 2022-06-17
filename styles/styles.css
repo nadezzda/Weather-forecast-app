@@ -46,6 +46,9 @@
   .general {
     margin: 10px;
   }
+  #temper {
+    display: inline-flex;
+  }
   .cityname {
     padding: 5px 10px;
   }
@@ -87,7 +90,7 @@
     background-color: rgb(200, 238, 251);
   }
   #celcium, #farenheit {
-    font-size: 40px;
+    font-size: 15px;
   }
   #link {
     font-family: monospace;
@@ -97,4 +100,20 @@
 #icon {
   width: 50%;
   margin-left: 50px ;
+}
+#celcium.active  {
+color: black;
+cursor: default;
+
+}
+#farenheit.active {
+  color: black;
+cursor: default;
+
+}
+#celcium.active:hover {
+text-decoration: none;
+}
+#farenheit.active:hover {
+  text-decoration: none;
 }
