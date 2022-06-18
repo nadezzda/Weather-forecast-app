@@ -78,7 +78,7 @@
     border: 2px solid lightblue;
     border-radius: 40px;
     background-color: lightblue;
-    color: #a56cc1;
+    color: #9c56bf;
     font-size: 20px;
     text-align: center;
     font-family: "Cousine", monospace;
@@ -116,4 +116,7 @@ text-decoration: none;
 }
 #farenheit.active:hover {
   text-decoration: none;
+}
+.forecast-temp-min {
+    color: #ae8ebe;
 }
