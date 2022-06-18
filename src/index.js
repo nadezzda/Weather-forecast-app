@@ -26,6 +26,26 @@ function search(event) {
 let form = document.querySelector("form");
 form.addEventListener("submit", search);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Su","Mo","Tu","We","Th"];
+  let forecastHTML = `<div class="row">`
+  days.forEach(function (day) {
+    forecastHTML = forecastHTML + 
+    `<div class="col-2 days">
+          <div class="forecast-date">${day}</div>
+                  <img src="http://openweathermap.org/img/wn/50d@2x.png" width="42">
+                  <div class="forecast-temp">
+          <span class="forecast-temp-max">21°</span>
+          <span class="forecast-temp-min">21°</span>
+         </div>
+        </div>`;
+  });
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+}
+
+
 function temperature(response) {
   let h1 = document.querySelector(".temperature");
   tempCelcium = response.data.main.temp;
@@ -85,3 +105,4 @@ change.innerHTML = `${tempc}`;
 let convertc = document.querySelector("#celcium");
 convertc.addEventListener("click",celcium);
 
+displayForecast();
