@@ -19,17 +19,24 @@ function search(event) {
   let input = document.querySelector("#searchCity");
   let h1 = document.querySelector("#cityname");
   h1.innerHTML = `${input.value}`;
-  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiKey = "d7249251d267baa5dd99efa5bfe85b6e";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${apiKey}`;
   axios.get(url).then(temperature);
 }
 let form = document.querySelector("form");
 form.addEventListener("submit", search);
 
-function displayForecast() {
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "d7249251d267baa5dd99efa5bfe85b6e";
+  let Url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(Url).then(displayForecast);
+}
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let days = ["Su","Mo","Tu","We","Th"];
-  let forecastHTML = `<div class="row">`
+  let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
     forecastHTML = forecastHTML + 
     `<div class="col-2 days">
@@ -60,8 +67,9 @@ function temperature(response) {
   wind.innerHTML = Math.round(response.data.wind.speed);
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].main;
-  
-}
+  getForecast(response.data.coord);
+  }
+
 function current(event) {
   event.preventDefault();
   function weather(response) {
@@ -74,7 +82,7 @@ function current(event) {
   function location(position) {
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
-    let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    let apiKey = "d7249251d267baa5dd99efa5bfe85b6e";
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
     axios.get(url).then(weather);
   }
@@ -104,5 +112,3 @@ change.innerHTML = `${tempc}`;
 }
 let convertc = document.querySelector("#celcium");
 convertc.addEventListener("click",celcium);
-
-displayForecast();
