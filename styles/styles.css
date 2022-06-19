@@ -123,7 +123,7 @@ color: black;
 cursor: default;
 
 }
-#farenheit.active {
+/* #farenheit.active { 
   color: black;
 cursor: default;
 
@@ -136,7 +136,7 @@ text-decoration: none;
 }
 .forecast-temp-min {
     color: #ffaa64;
-}
+}*/
 .days {
   margin: 0 11px;
 }
