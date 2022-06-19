@@ -4,7 +4,7 @@
     margin: 30px;
     padding: 20px;
     background-color: #fbf5c7;
-    font-family: 'Goldman', cursive;
+    font-family:  'Goldman', cursive;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -37,7 +37,7 @@
     margin: 20px;
     padding: 20px;
     background: radial-gradient(circle at 10% 20%, rgb(255, 232, 182) 0%, #fbf5c7 90%); 
-    font-family:'Goldman', cursive;
+    font-family: 'Goldman', cursive;
     width: 50%;
     color: #ff6464;
     margin-left: auto;
@@ -58,12 +58,12 @@
   .degree {
     padding: 5px 30px;
     border-radius: 45px;
-    margin: 20px 30px 0;
+    margin: 20px 10px 0 30px;
     display: inline-flex;
   }
   
   #sense {
-    margin: 0 15px;
+    margin: 0 15px 0 5px;
     padding: 15px;
     background-color: white;
     border-radius: 10px;
@@ -87,7 +87,7 @@
     color: #ff6464;
     font-size: 20px;
     text-align: center;
-    font-family: 'Goldman', cursive;
+    font-family:  'Goldman', cursive;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
