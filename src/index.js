@@ -35,7 +35,7 @@ function getForecast(coordinates) {
 function formatDate(timestamp) {
 let date = new Date(timestamp * 1000);
 let day = date.getDay();
-let days = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 return days[day];
 }
 
@@ -100,7 +100,7 @@ function current(event) {
 let button = document.querySelector("#cur");
 button.addEventListener("click", current);
 
-function farenheit(event) {
+/*function farenheit(event) {
 event.preventDefault();
 convertc.classList.remove("active");
 convertf.classList.add("active");
@@ -121,3 +121,4 @@ change.innerHTML = `${tempc}`;
 }
 let convertc = document.querySelector("#celcium");
 convertc.addEventListener("click",celcium);
+*/

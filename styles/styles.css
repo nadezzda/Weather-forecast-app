@@ -3,28 +3,28 @@
     border-radius: 30px;
     margin: 30px;
     padding: 20px;
-    background-color: lightblue;
-    font-family: "Cousine", monospace;
+    background-color: #fbf5c7;
+    font-family: 'Goldman', cursive;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 1px 10px 19px 7px rgba(0, 0, 0, 0.2);
   }
   #search {
-    background-color: #a56cc1;
-    color: #cefff1;
+    background-color: #ff6464;
+    color: #fbf5c7;
     padding: 8px 10px;
     border: none;
-    border-radius: 20px;
-    margin: 0 20px ;
+    border-radius: 10px;
+   margin-left: 10px;
   }
   #cur {
-    background-color: #6c83c1;
-    color: #cefff1;
+    background-color: #ff8264;
+    color: #fbf5c7;
     padding: 8px 10px;
     border: none;
-    border-radius: 20px;
-    margin: 0 10px ;
-  }
+    border-radius: 10px;
+ }
 
   form {
     padding: 8px;
@@ -32,23 +32,24 @@
   }
   h1 {
     display: inline;
-  }
+      }
   .current {
     margin: 20px;
     padding: 20px;
-    background-color: lightblue;
-    font-family: "Cousine", monospace;
+    background: radial-gradient(circle at 10% 20%, rgb(255, 232, 182) 0%, #fbf5c7 90%); 
+    font-family:'Goldman', cursive;
     width: 50%;
-    color: #a56cc1;
+    color: #ff6464;
     margin-left: auto;
     margin-right: auto;
-  }
+    box-shadow: 1px 10px 19px 7px rgba(0, 0, 0, 0.2);
+    }
   .general {
     margin: 10px;
   }
   #temper {
     display: inline-flex;
-  }
+     }
   .cityname {
     padding: 5px 10px;
   }
@@ -59,35 +60,30 @@
   .container {
     padding: 10px;
     margin: 20px 5px;
-    background-color: lightblue;
-  }
-  .fa-sun {
-    font-size: 70px;
-    color: #6c83c1;
-    padding: 30px 60px;
-    margin: 0;
-  }
+    }
+ 
   .precipitation {
-    color: #a56cc1;
+    color: #ff8264;
     padding: 30px;
     font-size: 19px;
   }
   .forecast {
     margin: 10px;
     padding: 30px;
-    border: 2px solid lightblue;
+    border: 2px solid #fbf5c7;
     border-radius: 40px;
-    background-color: lightblue;
-    color: #9c56bf;
+    background-color: #fbf5c7;
+    color: #ff6464;
     font-size: 20px;
     text-align: center;
-    font-family: "Cousine", monospace;
+    font-family: 'Goldman', cursive;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 1px 10px 19px 7px rgba(0, 0, 0, 0.2);
   }
   .days:hover {
-    background-color: rgb(200, 238, 251);
+    background-color: rgb(255, 232, 182);
   }
   #celcium, #farenheit {
     font-size: 15px;
@@ -118,7 +114,7 @@ text-decoration: none;
   text-decoration: none;
 }
 .forecast-temp-min {
-    color: #ae8ebe;
+    color: #ffaa64;
 }
 .days {
   margin: 0 11px;
