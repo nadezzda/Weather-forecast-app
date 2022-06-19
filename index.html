@@ -31,28 +31,33 @@
      </div> 
       </form>
     </div>
+
+
     <div class="current">
       <div class="general">
-        <div id="temper">
-        <h1 id="cityname">Braunschweig</h1>
-        <h1 class="temperature">23</h1>°C
+        <div id="city">
+        <h1 id="cityname">Braunschweig</h1><h1>, </h1><h1 id="country"> DE</h1>
+        
  <!-- <a href="#" class="active" id="celcium">°C</a> | <a href="#" id="farenheit">°F</a>  -->
-          </div>
-        <h2 class="date">Saturday 19:01</h2>
+        </div>
+       <div class="time"><h2>Last update: </h2><h2 class="date">Saturday 19:01</h2></div>
       </div>
+     <div class="degree"> <p id="sense">There is no bad weather, there are bad clothes)</p><h1 class="temperature">23</h1><h1>°C</h1></div> 
       <div class="container">
         <div class="row">
           <div class="col icon">
-            <img src="#" id="icon">
+            <img src="http://openweathermap.org/img/wn/01d@2x.png" id="icon">
           </div>
           <div class="col precipitation">
             <span id="description">Overcast clouds</span><br />
             Humidity: <span id="humidity">37</span>%<br />
-            Wind: <span id="wind">27 </span> km/h
+            Wind: <span id="wind">27</span> km/h
           </div>
         </div>
       </div>
     </div>
+
+
     <div class="forecast" id="forecast"></div>
     <script src="src/index.js"></script>
     <p id="link"><a href="https://github.com/nadezzda/my-project" id="repository">Open-source code</a>, by Nadiia Malichenko</p>

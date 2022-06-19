@@ -11,7 +11,7 @@ let days = [
 let day = days[now.getDay()];
 let hour = now.getHours();
 let minutes = now.getMinutes();
-let h2 = document.querySelector("h2");
+let h2 = document.querySelector(".date");
 h2.innerHTML = `${day} ${hour}:${minutes}`;
 
 function search(event) {
@@ -75,8 +75,10 @@ function temperature(response) {
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = Math.round(response.data.wind.speed);
   let description = document.querySelector("#description");
-  description.innerHTML = response.data.weather[0].main;
+  description.innerHTML = response.data.weather[0].description;
   getForecast(response.data.coord);
+  let country = document.querySelector("#country");
+  country.innerHTML = `${response.data.sys.country}`;
   }
 
 function current(event) {
@@ -99,6 +101,7 @@ function current(event) {
 }
 let button = document.querySelector("#cur");
 button.addEventListener("click", current);
+
 
 /*function farenheit(event) {
 event.preventDefault();
