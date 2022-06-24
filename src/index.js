@@ -14,24 +14,7 @@ let minutes = now.getMinutes();
 let h2 = document.querySelector(".date");
 h2.innerHTML = `${day} ${hour}:${minutes}`;
 
-function search(event) {
-  event.preventDefault();
-  let input = document.querySelector("#searchCity");
-  let h1 = document.querySelector("#cityname");
-  h1.innerHTML = `${input.value}`;
-  let apiKey = "d7249251d267baa5dd99efa5bfe85b6e";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${apiKey}`;
-  axios.get(url).then(temperature);
-}
-let form = document.querySelector("form");
-form.addEventListener("submit", search);
 
-function getForecast(coordinates) {
-  console.log(coordinates);
-  let apiKey = "d7249251d267baa5dd99efa5bfe85b6e";
-  let Url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  axios.get(Url).then(displayForecast);
-}
 function formatDate(timestamp) {
 let date = new Date(timestamp * 1000);
 let day = date.getDay();
@@ -44,6 +27,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   
   let forecastHTML = `<div class="row">`;
+  
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
     forecastHTML = forecastHTML + 
@@ -61,8 +45,31 @@ forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  let apiKey = "d7249251d267baa5dd99efa5bfe85b6e";
+  let lon = coordinates.lon;
+  let lat = coordinates.lat;
+  let Url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(Url).then(displayForecast);
+}
+
+
+
+
+
+function search(event) {
+  event.preventDefault();
+  let input = document.querySelector("#searchCity");
+  let h1 = document.querySelector("#cityname");
+  h1.innerHTML = `${input.value}`;
+  let apiKey = "d7249251d267baa5dd99efa5bfe85b6e";
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${apiKey}`;
+  axios.get(url).then(temperature);
+}
+
 
 function temperature(response) {
+
   let h1 = document.querySelector(".temperature");
   tempCelcium = response.data.main.temp;
   let temp = Math.round(tempCelcium);
@@ -99,11 +106,15 @@ function current(event) {
   }
   navigator.geolocation.getCurrentPosition(location);
 }
-let button = document.querySelector("#cur");
+
+let form = document.querySelector("form");
+form.addEventListener("submit", search);
+ 
+/*let button = document.querySelector("#cur");
 button.addEventListener("click", current);
+displayForecast();
 
-
-/*function farenheit(event) {
+function farenheit(event) {
 event.preventDefault();
 convertc.classList.remove("active");
 convertf.classList.add("active");
